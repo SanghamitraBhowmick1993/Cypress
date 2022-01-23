@@ -1,0 +1,36 @@
+//opening browser/application in diff view ports
+describe('testing different view ports',()=>){//callback function => or suppilier, no input it takes, but returns output
+before(()=>{
+    console.log('running my tests')
+})
+
+beforeEach(()=>{
+    cy.visit('http://www.google.com')
+})
+it('open in macbook-13',()=>){
+  cy.viewport('macbook-13')
+  cy.screenshot()
+  cy.wait(200)
+})
+
+it('open in macbook-15',()=>){
+  cy.viewport('macbook-15')
+  cy.screenshot()
+  cy.wait(200)
+})
+
+it('open in iphone-x',()=>){
+  cy.viewport('iphone-x')
+  cy.screenshot()
+  cy.wait(200)
+})
+    
+})
+
+//particular test case
+
+//./node_modules/.bin/cypress run --spec cypress/integration/myTest/ele_test.js -- browser=chrome
+
+//all test(headless node in electron 80)
+
+//./node_modules/.bin/cypress run --spec cypress/integration/*.js

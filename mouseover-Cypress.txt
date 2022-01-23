@@ -1,0 +1,37 @@
+//get(), find(), within() methods in assertions
+
+describe('mosueover feature1',()=>{
+   it.skip('mosueover feature test1',()=>{
+      cy.visit("https://www.spicejet.com")
+      cy.contains('login/signup').trigger('mouseover')
+      cy.contains('members').trigger('mouseover')
+      cy.contains('sign up').click()
+     
+      
+   })
+
+   it.skip('mosueover feature test2',()=>{
+      cy.visit("https://www.spicejet.com")
+      cy.contains('login/signup').trigger('mouseover')
+      cy.contains('members').trigger('mouseover')
+      cy.contains('member login').click()
+     
+      
+   })
+   
+    it('mosueover feature test3',()=>{
+      cy.visit("https://www.automationpractice.com")
+      cy.get('.ajax class').first().click()
+      cy.get('.cross').click()
+      cy.wait(3000)
+      cy.get('.cart_block')
+      .should('be.hidden')
+      .invoke('show') //using invoke method
+      cy.get('#idval').click()
+      cy.url().should('include','controller order')
+     
+      
+   })
+     
+     
+    })

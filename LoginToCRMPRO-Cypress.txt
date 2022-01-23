@@ -1,0 +1,13 @@
+
+describe('free CRM test', ()=>){
+it('login test', ()=>){
+cy.visit("https://classic.crmpro.com")
+cy.title().should('have','CRMPRO')
+cy.get('input[name="username"]').type('testauto')
+cy.get('input[name="password"]').type('test')
+cy.get('input[type="submit"]').click() //only CSS selectors and jQuery
+cy.title().should('have','CRMPRO')
+        
+        
+    }
+}

@@ -1,0 +1,22 @@
+//Cypress folder structure
+
+//node modules -->bin--> open cypress
+//1. fixtures --> all static data/constants 
+//un, email, env var, using cy.fixture()
+//2.integration --> folder to write TC
+//3.plugins --> index.js (all plugin and env var and chrome options to accept cerf)
+//4.support --> utilities,common classes,custom wrappers
+//5.node_modules --> all package, default libs
+//6. package.json --> all dependencies (gives a binary having all dep like mocha etc.)
+//7. cypress.json--> base url, timeout, chromesecurity= false, cross platform
+
+//writing test cases using mocha
+//describe (group of test cases)
+//context (alias of des)
+//it (@test1)
+//before() --> runs before
+//after() --> runs after all test blocks
+//.skip()-->it.skip()--> to skip
+//it.only() --> to run only that TC
+
+

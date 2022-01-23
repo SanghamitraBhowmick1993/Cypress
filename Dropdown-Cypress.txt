@@ -1,0 +1,23 @@
+//get(), find(), within() methods in assertions
+
+describe('dropdown feature',()=>{
+   it.skip('dropdown feature test',()=>{
+      cy.visit("https://www.orangeHRM.com")
+      cy.get('#valueofID')//drpdown with select tag,use select method
+      .select('India')
+      .should('have.value','India')//assertion
+      
+   })
+   
+   it('dropdown feature test1',()=>{
+      cy.visit("https://www.google.com")
+      cy.get('[name=q]') //without select like list,jQuery,bootstrap
+      .type('cypress')
+      cy.get('.classname')
+      .find('li span')
+      .contains('cypress test')
+      .click //chaining
+      
+   })
+     
+    })
